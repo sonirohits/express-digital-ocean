@@ -1,8 +1,10 @@
-import express from "express";
+import 'dotenv/config';
 
+import express from "express";
 const app =express();
-const port =3000;
+const port = process.env.port || 3000;
 app.use(express.json()); //any data come in json formate then accept that
+
 
 let teaData =[];
 let nextId =1;
